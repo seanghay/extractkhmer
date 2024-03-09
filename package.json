@@ -2,7 +2,7 @@
   "name": "extractkhmer",
   "type": "module",
   "dependencies": {
-    "chrome-lens-ocr": "^1.0.2",
+    "chrome-lens-ocr": "^2.0.1",
     "dotenv": "^16.4.1",
     "fast-glob": "^3.3.2",
     "p-queue": "^8.0.1",

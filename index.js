@@ -45,11 +45,11 @@ for await (const file of fg.stream(IMAGE_DIRECTORY)) {
   queue.add(async () => {
     try {
       const result = await lens.scanByFile(file);
-      if (!result || !Array.isArray(result.text_segments)) {
+      if (!result || !Array.isArray(result.segments)) {
         return;
       }
       await fs.writeFile(jsonFile, JSON.stringify(result, null, 2), 'utf8');
-      logger.info(`[${p.base}] segments=[${result.text_segments.length}] file=[${jsonFile}]`);
+      logger.info(`[${p.base}] segments=[${result.segments.length}] file=[${jsonFile}]`);
     } catch (e) {
       logger.error(e);
     }
